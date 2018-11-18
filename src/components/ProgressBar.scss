@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.progressBar {
+  width: $app-width;
+  height: $progress-bar-height;
+  border-radius: 2px;
+  border: 2px solid $mauve;
+  margin: 5px auto;
+  text-align: center;
+  position: relative;
+}
+
+.progress {
+  background-color: $red;
+  height: 100%;
+  width: 25%;
+
+  &.complete {
+    background-color: $mauve;
+  }
+}
+
+.progress-text {
+  position: absolute;
+  width: 100%;
+  line-height: $progress-bar-height;
+}
+
+.complete {
+  background-color: $yellow;
+}

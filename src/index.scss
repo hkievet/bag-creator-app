@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +8,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  height: 50px;
+  border-radius: 5px;
+  border-color: $yellow;
+  font-size: 1.5em;
+
+  &:active {
+    background-color: $yellow;
+  }
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba($yellow, 0.5);
+  }
 }

@@ -1,3 +1,36 @@
+# Bag Creator
+
+Give introduction
+
+Step 1: Primary Fabric
+
+Required: Fabric type:
+cotton, silk, linen, duck cloth
+price associated with each
+
+Color chooser based on selection
+
+Step 2: Optional ornamental rectangular stripe
+
+Would you like a decorative stripe?
+no -> nothing
+yes -> fabric type (based on previous selection)
+
+Step 3: Select how you would like bag to close
+
+Open sack
+
+String ->
+Single String | Dual String
+String type
+String Ends (beads | knot)
+String opening ( grommets | button holes)
+grommets -> color | material
+button holes -> stitch type
+Zipper -> metal chain, molded plastic chain, nylon coil chain
+
+Step 4: Custom Text Embroidery
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
