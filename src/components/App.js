@@ -5,6 +5,7 @@ import ProgressBar from "./ProgressBar";
 import NextStepButton from "./NextStepButton";
 
 import "./App.scss";
+import FabricPicker from "./FabricPicker";
 
 const mapStateToProps = state => {
   return {
@@ -27,6 +28,9 @@ const App = props => {
         totalSteps={props.totalSteps}
         currentStep={props.currentStep}
       />
+      <div className="form-step">
+        <FabricPicker />
+      </div>
       <div className="button-wrapper">{button}</div>
     </div>
   );

@@ -1,0 +1,19 @@
+.filter-image {
+  width: 500px;
+  height: 500px;
+}
+
+.image-holder {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: inherit; // this will be set with an inline JSX style which will give the image tint
+  }
+}

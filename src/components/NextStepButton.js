@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { myActions } from "../store";
 
 const mapStateToProps = null;
-export const PROGRESS_TO_NEXT_STEP = "PROGRESS_TO_NEXT-STEP";
 
 const mapDispatchToProps = dispatch => {
   return {
