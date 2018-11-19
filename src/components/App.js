@@ -7,6 +7,7 @@ import NextStepButton from "./NextStepButton";
 import "./App.scss";
 import FabricColorPickerWidget from "./FabricColorPickerWidget";
 import FabricPickerWidget from "./FabricPickerWidget";
+import { Link } from "react-router-dom";
 
 const mapStateToProps = state => {
   return {
@@ -17,8 +18,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = null;
 
 const App = props => {
-  let button;
-
   const getFormStep = () => {
     if (props.currentStep === 1) {
       return <FabricPickerWidget />;
@@ -29,19 +28,27 @@ const App = props => {
     }
   };
 
+  let button;
   if (props.currentStep !== props.totalSteps) {
     button = <NextStepButton />;
   }
 
+  let summaryLink;
+  if (props.currentStep === props.totalSteps) {
+    summaryLink = <Link to="/summary">View Summary</Link>;
+  }
+
   return (
-    <div id="bag-creator">
-      <h1>Bag Creator</h1>
+    <div>
       <ProgressBar
         totalSteps={props.totalSteps}
         currentStep={props.currentStep}
       />
       <div className="form-step">{getFormStep()}</div>
-      <div className="button-wrapper">{button}</div>
+      <div className="button-wrapper">
+        {button}
+        {summaryLink}
+      </div>
     </div>
   );
 };

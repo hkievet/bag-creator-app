@@ -5,7 +5,8 @@ import { myActions } from "../store";
 const mapStateToProps = state => {
   return {
     stepState: state.stepState,
-    currentStep: state.currentStep
+    currentStep: state.currentStep,
+    totalSteps: state.totalSteps
   };
 };
 
@@ -26,7 +27,6 @@ const NextStepButton = props => {
   if (props.stepState[currentStageKey].complete) {
     button = <button onClick={props.onClick}>Next Step</button>;
   }
-
   return button;
 };
 
