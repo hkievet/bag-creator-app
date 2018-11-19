@@ -19,7 +19,6 @@ const ColorFilterImage = props => {
 
   let image;
   if (props.fabric.type) {
-    console.log(props);
     image = (
       <div>
         <p>Preview:</p>

@@ -19,7 +19,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 const NextStepButton = props => {
-  console.log(props.stepState);
   let currentStageKey = Object.keys(props.stepState).find(
     key => props.stepState[key].stepNumber === props.currentStep
   );
