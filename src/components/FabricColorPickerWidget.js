@@ -7,9 +7,10 @@ const mapStateToProps = null;
 
 const mapDispatchToProps = null;
 
-const FabricPicker = props => {
+const FabricColorPickerWidget = props => {
   return (
     <div>
+      <h2>Pick A Fabric Color</h2>
       <ColorPicker />
       <ImageCoverOverlay />
     </div>
@@ -19,4 +20,4 @@ const FabricPicker = props => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FabricPicker);
+)(FabricColorPickerWidget);

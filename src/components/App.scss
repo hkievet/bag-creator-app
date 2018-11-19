@@ -16,23 +16,8 @@
   margin: 0 auto;
 }
 
-.colors {
-  .color-choice {
-    cursor: pointer;
-    margin: 0 5px;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &.selected {
-      border: 1px solid black;
-    }
-  }
-}
-
+/*
+*/
 .image-overlay {
-  max-width: $app-width;
+  max-width: 250px;
 }

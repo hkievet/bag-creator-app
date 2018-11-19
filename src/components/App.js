@@ -5,7 +5,8 @@ import ProgressBar from "./ProgressBar";
 import NextStepButton from "./NextStepButton";
 
 import "./App.scss";
-import FabricPicker from "./FabricPicker";
+import FabricColorPickerWidget from "./FabricColorPickerWidget";
+import FabricPickerWidget from "./FabricPickerWidget";
 
 const mapStateToProps = state => {
   return {
@@ -17,6 +18,17 @@ const mapDispatchToProps = null;
 
 const App = props => {
   let button;
+
+  const getFormStep = () => {
+    if (props.currentStep === 1) {
+      return <FabricPickerWidget />;
+    } else if (props.currentStep === 2) {
+      return <FabricColorPickerWidget />;
+    } else {
+      return <p>Step not implemented. This app is a work in progress</p>;
+    }
+  };
+
   if (props.currentStep !== props.totalSteps) {
     button = <NextStepButton />;
   }
@@ -28,9 +40,7 @@ const App = props => {
         totalSteps={props.totalSteps}
         currentStep={props.currentStep}
       />
-      <div className="form-step">
-        <FabricPicker />
-      </div>
+      <div className="form-step">{getFormStep()}</div>
       <div className="button-wrapper">{button}</div>
     </div>
   );

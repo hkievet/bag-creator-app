@@ -17,15 +17,24 @@ const ColorFilterImage = props => {
     style.background = `${props.fabric.color}AA`;
   }
 
-  return (
-    <div className="image-holder" style={style}>
-      <img
-        src={images.fabrics[props.fabric.type.toLowerCase()].src}
-        className="image-overlay"
-        alt={props.fabric.type}
-      />
-    </div>
-  );
+  let image;
+  if (props.fabric.type) {
+    console.log(props);
+    image = (
+      <div>
+        <p>Preview:</p>
+        <div className="image-holder" style={style}>
+          <img
+            src={images.fabrics[props.fabric.type.toLowerCase()].src}
+            className="image-overlay"
+            alt={props.fabric.type}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return <div>{image}</div>;
 };
 
 export default connect(

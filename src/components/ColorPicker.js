@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { myActions } from "../store";
+import "./ColorPicker.scss";
 
 const mapStateToProps = state => {
   return {
@@ -32,7 +33,12 @@ const ColorPicker = props => {
       }}
     />
   ));
-  return <div className="colors">{colorElements}</div>;
+  return (
+    <div>
+      <p>Please select a color square from below to color your fabric.</p>
+      <div className="colors">{colorElements}</div>
+    </div>
+  );
 };
 
 export default connect(
