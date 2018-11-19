@@ -53,16 +53,6 @@ const App = props => {
   );
 };
 
-/*
-      <div className="form-step">
-        <FabricPicker
-          colors={props.colors}
-          onFabricUpdate={onFabricUpdate}
-          fabric={props.fabric}
-        />
-      </div>
-*/
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps

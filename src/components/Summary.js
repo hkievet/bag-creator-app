@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./Summary.scss";
+import { Link } from "react-router-dom";
+import { myActions } from "../store";
 
 const mapStateToProps = state => {
   return {
@@ -8,7 +10,13 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {};
+const mapDispatchToProps = dispatch => {
+  return {
+    reset: () => {
+      dispatch(myActions.startOver());
+    }
+  };
+};
 
 const Summary = props => {
   return (
@@ -16,6 +24,9 @@ const Summary = props => {
       <p>
         You want a {props.fabric.color} colored {props.fabric.type} bag.
       </p>
+      <Link to="/" onClick={props.reset}>
+        Start Over
+      </Link>
     </div>
   );
 };

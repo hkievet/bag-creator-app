@@ -4,6 +4,7 @@ import { cssColors } from "./colors";
 export const PROGRESS_TO_NEXT_STEP = "PROGRESS_TO_NEXT-STEP";
 export const CHOOSE_FABRIC_COLOR = "CHOOSE_FABRIC_COLOR";
 export const CHOOSE_FABRIC = "CHOOSE_FABRIC";
+export const START_OVER = "START_OVER";
 
 export const myActions = {
   progressToNextStep: {
@@ -19,6 +20,11 @@ export const myActions = {
     return {
       type: CHOOSE_FABRIC,
       fabricType: fabric
+    };
+  },
+  startOver: () => {
+    return {
+      type: START_OVER
     };
   }
 };
@@ -74,6 +80,8 @@ const reducer = (state = defaultState, action) => {
           })
         })
       });
+    case START_OVER:
+      return defaultState;
     default:
       return state;
   }

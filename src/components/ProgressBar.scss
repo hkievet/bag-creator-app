@@ -1,7 +1,8 @@
 @import "../variables.scss";
 
 .progressBar {
-  width: $app-width;
+  width: 80%;
+  max-width: $app-width;
   height: $progress-bar-height;
   border-radius: 2px;
   border: 2px solid $mauve;

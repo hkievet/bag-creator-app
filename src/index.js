@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Summary from "./components/Summary";
 
 ReactDOM.render(
-  <Router>
+  <Router basename={"bag-maker"}>
     <Provider store={store}>
       <div id="bag-creator">
         <h1>Bag Creator</h1>
